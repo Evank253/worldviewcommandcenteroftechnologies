@@ -1,0 +1,22 @@
+worldview-command-center/
+├── app/
+│   ├── page.tsx
+│   ├── dashboard/page.tsx
+│   ├── api/
+│   │   ├── events/route.ts
+│   │   ├── summary/route.ts
+│   │   ├── agents/
+│   │   │   ├── swarm/route.ts
+│   │   ├── monetization/route.ts
+│   │   ├── auth/[...nextauth]/route.ts
+├── components/
+│   ├── Map.tsx
+│   ├── Sidebar.tsx
+│   ├── Feed.tsx
+├── lib/
+│   ├── swarm.ts
+│   ├── monetization.ts
+├── styles/
+│   ├── globals.css
+├── package.json
+├── .env.example
