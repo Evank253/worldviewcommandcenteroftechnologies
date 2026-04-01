@@ -1,0 +1,23 @@
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+export async function runSwarm(events: any[]) {
+  const input = JSON.stringify(events.slice(0, 20));
+
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-4.1-mini',
+    messages: [
+      {
+        role: 'user',
+        content: `Analyze global patterns and predict trends:\n${input}`,
+      },
+    ],
+  });
+
+  return {
+    insight: completion.choices[0].message.content,
+  };
+}

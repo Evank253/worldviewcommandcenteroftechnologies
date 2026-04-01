@@ -1,0 +1,36 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import mapboxgl from 'mapbox-gl';
+
+export default function Map({ events }: any) {
+  const mapContainer = useRef<any>(null);
+  const mapRef = useRef<any>(null);
+
+  useEffect(() => {
+    mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN!;
+
+    mapRef.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/dark-v11',
+      center: [-98, 39],
+      zoom: 3,
+    });
+
+    return () => mapRef.current.remove();
+  }, []);
+
+  useEffect(() => {
+    if (!mapRef.current || !events) return;
+
+    events.forEach((event: any) => {
+      if (event.ActionGeo_Long && event.ActionGeo_Lat) {
+        new mapboxgl.Marker({ color: '#00ffcc' })
+          .setLngLat([event.ActionGeo_Long, event.ActionGeo_Lat])
+          .addTo(mapRef.current);
+      }
+    });
+  }, [events]);
+
+  return <div ref={mapContainer} className="w-full h-full" />;
+}

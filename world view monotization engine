@@ -1,0 +1,11 @@
+export const products = [
+  {
+    name: 'Trending Tech',
+    location: 'Global',
+    affiliateLink: 'https://your-affiliate-link.com',
+  },
+];
+
+export function matchProducts(events: any[]) {
+  return products;
+}

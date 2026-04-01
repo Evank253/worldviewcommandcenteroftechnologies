@@ -1,0 +1,11 @@
+import { NextResponse } from 'next/server';
+import { runSwarm } from '@/lib/swarm';
+
+export async function GET() {
+  const res = await fetch('http://localhost:3000/api/events');
+  const data = await res.json();
+
+  const result = await runSwarm(data.events || []);
+
+  return NextResponse.json(result);
+}
