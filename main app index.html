@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Worldview Command Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <header>
+    <h1>🌍 Worldview Command Center</h1>
+  </header>
+
+  <main class="dashboard">
+    <div class="card">
+      <h2>🌐 Global Status</h2>
+      <p id="status">Loading...</p>
+    </div>
+
+    <div class="card">
+      <h2>📊 Data Stream</h2>
+      <p id="data">Fetching...</p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Controls</h2>
+      <button onclick="refreshData()">Refresh Data</button>
+      <button onclick="installApp()">📲 Install App</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
