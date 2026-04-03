@@ -1,0 +1,9 @@
+function renderBusiness() {
+  return `
+    <div class="card">
+      <h2>📊 Business Metrics</h2>
+      <p>Revenue: $${(Math.random()*100000).toFixed(0)}</p>
+      <p>Users: ${Math.floor(Math.random()*10000)}</p>
+    </div>
+  `;
+}
