@@ -1,0 +1,9 @@
+function renderCyber() {
+  return `
+    <div class="card">
+      <h2>🕶️ System Security</h2>
+      <p>Status: SECURE</p>
+      <p>Threats Blocked: ${Math.floor(Math.random()*500)}</p>
+    </div>
+  `;
+}
