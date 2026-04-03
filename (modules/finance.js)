@@ -1,0 +1,9 @@
+function renderFinance() {
+  return `
+    <div class="card">
+      <h2>💰 Crypto Market</h2>
+      <p>BTC: $${(Math.random()*70000).toFixed(0)}</p>
+      <p>ETH: $${(Math.random()*4000).toFixed(0)}</p>
+    </div>
+  `;
+}
