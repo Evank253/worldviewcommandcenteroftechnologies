@@ -1,0 +1,8 @@
+function renderGlobal() {
+  return `
+    <div class="card">
+      <h2>🌍 Global Activity</h2>
+      <p>Active Regions: ${Math.floor(Math.random()*200)}</p>
+    </div>
+  `;
+}
