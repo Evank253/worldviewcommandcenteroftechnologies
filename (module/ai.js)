@@ -1,0 +1,14 @@
+function renderAI() {
+  const insights = [
+    "Market volatility rising",
+    "Stable global conditions",
+    "Anomaly detected in data stream"
+  ];
+
+  return `
+    <div class="card">
+      <h2>🤖 AI Insights</h2>
+      <p>${insights[Math.floor(Math.random()*insights.length)]}</p>
+    </div>
+  `;
+}
