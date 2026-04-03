@@ -1,0 +1,22 @@
+function refreshData() {
+  const statusStates = ["Online ✅", "High Load ⚠️", "Stable 🌐"];
+  const aiSignals = [
+    "Pattern detected...",
+    "Analyzing global trends...",
+    "No anomalies found",
+    "Spike detected in activity"
+  ];
+
+  document.getElementById("status").innerText =
+    statusStates[Math.floor(Math.random() * statusStates.length)];
+
+  document.getElementById("data").innerText =
+    "Live feed: " + (Math.random() * 1000).toFixed(2);
+
+  document.getElementById("ai").innerText =
+    aiSignals[Math.floor(Math.random() * aiSignals.length)];
+}
+
+// auto refresh every 3 sec
+setInterval(refreshData, 3000);
+refreshData();
