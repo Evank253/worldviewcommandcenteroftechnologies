@@ -1,0 +1,29 @@
+<header>
+  <h1>🌍 Worldview Command Center</h1>
+  <div class="live-indicator">
+    <span class="dot"></span> LIVE SYSTEM
+  </div>
+</header>
+
+<main class="dashboard">
+  <div class="card">
+    <h2>🌐 Global Status</h2>
+    <p id="status"></p>
+  </div>
+
+  <div class="card">
+    <h2>📊 Data Stream</h2>
+    <p id="data"></p>
+  </div>
+
+  <div class="card">
+    <h2>🧠 AI Signal</h2>
+    <p id="ai"></p>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Controls</h2>
+    <button onclick="refreshData()">Refresh Data</button>
+    <button onclick="installApp()">📲 Install App</button>
+  </div>
+</main>
